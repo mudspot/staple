@@ -3,9 +3,9 @@ import Config
 # Configure your database
 config :vosmos, Vosmos.Repo,
   username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "vosmos_dev",
+  password: "PNA8DhZjGP3Uf8YG",
+  hostname: "db.lpbxeqlbbxtayrnexikf.supabase.co",
+  database: "postgres",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
