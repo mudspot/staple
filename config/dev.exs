@@ -3,8 +3,8 @@ import Config
 # Configure your database
 config :staple, Staple.Repo,
   username: "postgres",
-  password: "PNA8DhZjGP3Uf8YG",
-  hostname: "db.lpbxeqlbbxtayrnexikf.supabase.co",
+  password: System.get_env("POSTGRES_PASSWORD"),
+  hostname: System.get_env("POSTGRES_SERVER"),
   database: "postgres",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
@@ -59,9 +59,8 @@ config :staple, StapleWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/staple_web/(controllers|live|components)/.*(ex|heex)$",
+      ~r"lib/staple_web/(controllers|live|components)/.*(ex|heex|sface|js)$",
       ~r"lib/staple_web/live/.*(sface)$",
-      ~r"lib/staple_web/(live|components)/.*(ex|js)$",
     ]
   ]
 
