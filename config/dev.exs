@@ -54,11 +54,14 @@ config :vosmos, VosmosWeb.Endpoint,
 
 # Watch static and templates for browser reloading.
 config :vosmos, VosmosWeb.Endpoint,
+  reloadable_compilers: [:phoenix, :elixir, :surface],
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/vosmos_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/vosmos_web/(controllers|live|components)/.*(ex|heex)$",
+      ~r"lib/vosmos_web/live/.*(sface)$",
+      ~r"lib/vosmos_web/(live|components)/.*(ex|js)$",
     ]
   ]
 

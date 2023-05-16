@@ -9,7 +9,8 @@ defmodule Vosmos.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      compilers: Mix.compilers() ++ [:surface]
     ]
   end
 
@@ -51,7 +52,8 @@ defmodule Vosmos.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:ash_postgres, "~> 1.3"},
-      {:ash_authentication_phoenix, "~> 1.7"}
+      {:ash_authentication_phoenix, "~> 1.7"},
+      {:surface, "~> 0.10.0"}
     ]
   end
 
