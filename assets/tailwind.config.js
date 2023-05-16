@@ -12,7 +12,9 @@ module.exports = {
     "../lib/*_web.ex",
     "../lib/*_web/**/*.*ex",
     "../deps/ash_authentication_phoenix/**/*.ex",
-    "./node_modules/flowbite/**/*.js"
+    "./node_modules/flowbite/**/*.js",
+    "../lib/*_web/**/*.sface",
+    "../priv/catalogue/**/*.{ex,sface}",
   ],
   theme: {
     extend: {
