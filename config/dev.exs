@@ -1,7 +1,7 @@
 import Config
 
 # Configure your database
-config :vosmos, Vosmos.Repo,
+config :staple, Staple.Repo,
   username: "postgres",
   password: "PNA8DhZjGP3Uf8YG",
   hostname: "db.lpbxeqlbbxtayrnexikf.supabase.co",
@@ -16,7 +16,7 @@ config :vosmos, Vosmos.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with esbuild to bundle .js and .css sources.
-config :vosmos, VosmosWeb.Endpoint,
+config :staple, StapleWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
@@ -53,20 +53,20 @@ config :vosmos, VosmosWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :vosmos, VosmosWeb.Endpoint,
+config :staple, StapleWeb.Endpoint,
   reloadable_compilers: [:phoenix, :elixir, :surface],
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/vosmos_web/(controllers|live|components)/.*(ex|heex)$",
-      ~r"lib/vosmos_web/live/.*(sface)$",
-      ~r"lib/vosmos_web/(live|components)/.*(ex|js)$",
+      ~r"lib/staple_web/(controllers|live|components)/.*(ex|heex)$",
+      ~r"lib/staple_web/live/.*(sface)$",
+      ~r"lib/staple_web/(live|components)/.*(ex|js)$",
     ]
   ]
 
 # Enable dev routes for dashboard and mailbox
-config :vosmos, dev_routes: true
+config :staple, dev_routes: true
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

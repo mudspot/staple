@@ -1,6 +1,6 @@
-defmodule Vosmos do
+defmodule Staple do
   @moduledoc """
-  Vosmos keeps the contexts that define your domain
+  Staple keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

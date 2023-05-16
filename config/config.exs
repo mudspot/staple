@@ -7,17 +7,17 @@
 # General application configuration
 import Config
 
-config :vosmos,
-  ecto_repos: [Vosmos.Repo]
+config :staple,
+  ecto_repos: [Staple.Repo]
 
 # Configures the endpoint
-config :vosmos, VosmosWeb.Endpoint,
+config :staple, StapleWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [html: VosmosWeb.ErrorHTML, json: VosmosWeb.ErrorJSON],
+    formats: [html: StapleWeb.ErrorHTML, json: StapleWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: Vosmos.PubSub,
+  pubsub_server: Staple.PubSub,
   live_view: [signing_salt: "0n/fcIGP"]
 
 # Configures the mailer
@@ -27,7 +27,7 @@ config :vosmos, VosmosWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :vosmos, Vosmos.Mailer, adapter: Swoosh.Adapters.Local
+config :staple, Staple.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,

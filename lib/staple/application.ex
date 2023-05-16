@@ -1,4 +1,4 @@
-defmodule Vosmos.Application do
+defmodule Staple.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,22 +9,22 @@ defmodule Vosmos.Application do
   def start(_type, _args) do
     children = [
       # Start the Telemetry supervisor
-      VosmosWeb.Telemetry,
+      StapleWeb.Telemetry,
       # Start the Ecto repository
-      Vosmos.Repo,
+      Staple.Repo,
       # Start the PubSub system
-      {Phoenix.PubSub, name: Vosmos.PubSub},
+      {Phoenix.PubSub, name: Staple.PubSub},
       # Start Finch
-      {Finch, name: Vosmos.Finch},
+      {Finch, name: Staple.Finch},
       # Start the Endpoint (http/https)
-      VosmosWeb.Endpoint
-      # Start a worker by calling: Vosmos.Worker.start_link(arg)
-      # {Vosmos.Worker, arg}
+      StapleWeb.Endpoint
+      # Start a worker by calling: Staple.Worker.start_link(arg)
+      # {Staple.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Vosmos.Supervisor]
+    opts = [strategy: :one_for_one, name: Staple.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -32,7 +32,7 @@ defmodule Vosmos.Application do
   # whenever the application is updated.
   @impl true
   def config_change(changed, _new, removed) do
-    VosmosWeb.Endpoint.config_change(changed, removed)
+    StapleWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

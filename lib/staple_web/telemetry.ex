@@ -1,4 +1,4 @@
-defmodule VosmosWeb.Telemetry do
+defmodule StapleWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -52,23 +52,23 @@ defmodule VosmosWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("vosmos.repo.query.total_time",
+      summary("staple.repo.query.total_time",
         unit: {:native, :millisecond},
         description: "The sum of the other measurements"
       ),
-      summary("vosmos.repo.query.decode_time",
+      summary("staple.repo.query.decode_time",
         unit: {:native, :millisecond},
         description: "The time spent decoding the data received from the database"
       ),
-      summary("vosmos.repo.query.query_time",
+      summary("staple.repo.query.query_time",
         unit: {:native, :millisecond},
         description: "The time spent executing the query"
       ),
-      summary("vosmos.repo.query.queue_time",
+      summary("staple.repo.query.queue_time",
         unit: {:native, :millisecond},
         description: "The time spent waiting for a database connection"
       ),
-      summary("vosmos.repo.query.idle_time",
+      summary("staple.repo.query.idle_time",
         unit: {:native, :millisecond},
         description:
           "The time the connection spent waiting before being checked out for the query"
@@ -86,7 +86,7 @@ defmodule VosmosWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {VosmosWeb, :count_users, []}
+      # {StapleWeb, :count_users, []}
     ]
   end
 end

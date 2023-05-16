@@ -1,5 +1,5 @@
-defmodule VosmosWeb.PageControllerTest do
-  use VosmosWeb.ConnCase
+defmodule StapleWeb.PageControllerTest do
+  use StapleWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")

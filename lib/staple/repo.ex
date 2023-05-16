@@ -1,5 +1,5 @@
-defmodule Vosmos.Repo do
+defmodule Staple.Repo do
   use Ecto.Repo,
-    otp_app: :vosmos,
+    otp_app: :staple,
     adapter: Ecto.Adapters.Postgres
 end

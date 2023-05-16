@@ -1,4 +1,4 @@
-# Vosmos
+# Staple
 
 To start your Phoenix server:
 

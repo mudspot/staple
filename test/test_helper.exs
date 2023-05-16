@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(Vosmos.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Staple.Repo, :manual)
